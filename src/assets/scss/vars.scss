@@ -1,0 +1,10 @@
+$buttonColor: #FF7028;
+
+@mixin orenburgcFont400 {
+    font-family: 'OrenburgC', sans-serif;
+    font-weight: 400;
+}
+@mixin orenburgcFont700 {
+    font-family: 'OrenburgC', sans-serif;
+    font-weight: 700;
+}
