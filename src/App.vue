@@ -1,7 +1,3 @@
 <template>
-    <div class=""></div>
+    <router-view/>
 </template>
-
-<style lang="scss">
-
-</style>

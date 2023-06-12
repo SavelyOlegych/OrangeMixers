@@ -1,4 +1,5 @@
 $buttonColor: #FF7028;
+$darkGreyBgColor: rgba(6, 7, 7, 0.85);
 
 @mixin orenburgcFont400 {
     font-family: 'OrenburgC', sans-serif;
@@ -7,4 +8,17 @@ $buttonColor: #FF7028;
 @mixin orenburgcFont700 {
     font-family: 'OrenburgC', sans-serif;
     font-weight: 700;
+}
+
+@mixin displayFlex($justifyContent: normal, $alignItems: normal) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin popupKeyframes($name) {
+    @keyframes #{$name} {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
 }
