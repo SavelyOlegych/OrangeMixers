@@ -8,7 +8,7 @@
                 <div class="header__text" v-if="isMainPage">
                     Разработано в Германии. Сделано в России.
                 </div>
-                <HeaderMenu v-else />
+                <HeaderMenu v-else/>
             </div>
             <div class="header__group">
                 <div class="header__phone">
@@ -16,13 +16,14 @@
                     <a class="header__phone-text" href="tel:+79999999999">+7 (999) 999 99 99</a>
                 </div>
                 <HeaderButton @click="isHeaderSearchVisible = !isHeaderSearchVisible">
-                    <img class="header__search-icon" src="@/assets/svg/search-icon.svg" alt="search icon" width="20" height="20">
+                    <img class="header__search-icon" src="@/assets/svg/search-icon.svg" alt="search icon" width="20"
+                         height="20">
                 </HeaderButton>
             </div>
         </div>
     </header>
     <PopupBackground v-model:show="isHeaderSearchVisible" :full-screen="false">
-        <HeaderSearch @click.stop />
+        <HeaderSearch @click.stop/>
     </PopupBackground>
 </template>
 
@@ -33,17 +34,22 @@ import PopupBackground from '@/components/PopupBackground.vue';
 import HeaderSearch from '@/components/HeaderSearch.vue';
 
 export default {
-    components: { HeaderSearch, PopupBackground, HeaderMenu, HeaderButton },
-    data() {
+    components: {
+        HeaderSearch,
+        PopupBackground,
+        HeaderMenu,
+        HeaderButton
+    },
+    data () {
         return {
             isMainPage: this.$route.path === '/',
             isHeaderSearchVisible: false
-        }
+        };
     }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header {
     background-color: $darkGreyBgColor;
 
@@ -53,29 +59,35 @@ export default {
         padding: 0 20px;
         margin: 0 auto;
         height: 64px;
+
+        &--main-page {
+            height: 95px;
+        }
     }
-    &__wrapper--main-page {
-        height: 95px;
-    }
+
     &__group {
         @include displayFlex(space-between, center);
     }
+
     &__text {
         font-size: 18px;
         line-height: 20px;
         color: #939393;
         margin-left: 26px;
     }
+
     &__phone {
         @include displayFlex(space-between, center);
         margin-right: 32px;
+
+        &-text {
+            font-size: 16px;
+            line-height: 20px;
+            color: #999999;
+            margin-left: 4px;
+        }
     }
-    &__phone-text {
-        font-size: 16px;
-        line-height: 20px;
-        color: #999999;
-        margin-left: 4px;
-    }
+
     &__search-icon {
         margin: 0 10px;
     }

@@ -6,7 +6,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .common-button-wrapper {
     position: relative;
     display: inline-block;
@@ -30,7 +30,7 @@
     border-radius: 2.33px;
     z-index: 10;
     position: relative;
-    transition: 0.6s;
+    transition: transform 0.6s;
 
     &:hover {
         transform: translate(3.5px, 3.5px);

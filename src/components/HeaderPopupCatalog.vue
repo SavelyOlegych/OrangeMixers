@@ -46,18 +46,22 @@
     &-item {
         @include displayFlex(center, center);
         flex-direction: column;
+
+        &:nth-child(n + 1) {
+            border-left: 1px solid #ECECEC;
+        }
+
+        &:hover {
+            background-color: #FAFAFA;
+        }
     }
-    &-item:nth-child(n + 1) {
-        border-left: 1px solid #ECECEC;
-    }
-    &-item:hover {
-        background-color: #FAFAFA;
-    }
+
     &-image {
         margin-bottom: 26px;
     }
+
     &-title {
-        @include orenburgcFont400;
+        @include orenburgcRegular;
         font-size: 18px;
         line-height: 20px;
         color: #151716;

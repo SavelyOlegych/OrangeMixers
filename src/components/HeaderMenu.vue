@@ -42,32 +42,36 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .header__menu {
     @include displayFlex(center, center);
     padding-top: 5px;
     margin-left: 11px;
 
     &-item {
-        @include orenburgcFont400;
+        @include orenburgcRegular;
         font-size: 18px;
         line-height: 24px;
         color: #BEBEBE;
         transition: color .3s;
         cursor: pointer;
         margin-left: 25px;
+
+        &:hover {
+            color: #FFFFFF;
+        }
     }
+
     &-arrow {
         margin-bottom: 1px;
         stroke: #BEBEBE;
         transition: all .3s;
     }
-    &-item:hover {
-        color: #FFFFFF;
-    }
+
     &-item:hover &-arrow {
         stroke: #FFFFFF;
     }
+
     &-item--active &-arrow {
         transform: rotate(-180deg);
     }

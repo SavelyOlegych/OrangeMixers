@@ -1,6 +1,7 @@
 @import "reset";
 @import "fonts";
 @import "vars";
+@import "mixins";
 
 body {
   font-family: 'PT Sans', sans-serif;
@@ -8,6 +9,7 @@ body {
   font-size: 16px;
   line-height: 20px;
 }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;

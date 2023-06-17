@@ -4,13 +4,7 @@
     </button>
 </template>
 
-<script>
-export default {
-
-};
-</script>
-
-<style lang="scss">
+<style lang="scss" scoped>
 .header__button {
     @include displayFlex(center, center);
     border: 1px solid #494949;

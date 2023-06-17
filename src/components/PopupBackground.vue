@@ -46,6 +46,7 @@ export default {
     &--except-header {
         top: 64px;
     }
+
     &--except-main-header {
         top: 95px;
     }

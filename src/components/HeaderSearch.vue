@@ -46,13 +46,14 @@ export default {
     animation: showSearch .3s;
 
     &-title {
-        @include orenburgcFont400;
+        @include orenburgcRegular;
         font-size: 32px;
         line-height: 36px;
         letter-spacing: -0.5px;
         text-align: center;
         margin-left: 12px;
     }
+
     &-input {
         height: 56px;
         border: 1px solid #D9D9D9;
@@ -64,25 +65,27 @@ export default {
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
+
+        &::placeholder {
+            font: inherit;
+        }
+
+        &:hover {
+            border-color: #747474;
+        }
+
+        &:focus {
+            border-color: #EC9F76;
+            box-shadow: 0 0 6px #FF7028;
+        }
     }
-    &-input::placeholder {
-        font-family: inherit;
-        font-weight: inherit;
-        font-size: inherit;
-        line-height: inherit;
-    }
-    &-input:hover {
-        border-color: #747474;
-    }
-    &-input:focus {
-        border-color: #EC9F76;
-        box-shadow: 0 0 6px #FF7028;
-    }
+
     &-button-wrapper {
         margin-left: 12px;
         margin-right: 59.5px;
         margin-bottom: 5px;
     }
+
     &-button-text {
         font-size: 19px;
         line-height: 28px;
