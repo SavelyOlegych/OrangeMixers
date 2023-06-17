@@ -1,25 +1,25 @@
 <template>
     <div class="header__catalog">
         <a class="header__catalog-item" href="#">
-            <img class="header__catalog-image" src="@/assets/svg/tap.svg" alt="tap" width="80" height="80">
+            <img class="header__catalog-image" src="../../assets/svg/tap.svg" alt="tap" width="80" height="80">
             <div class="header__catalog-title">
                 Смесители
             </div>
         </a>
         <a class="header__catalog-item" href="#">
-            <img class="header__catalog-image" src="@/assets/svg/furniture.svg" alt="furniture" width="80" height="80">
+            <img class="header__catalog-image" src="../../assets/svg/furniture.svg" alt="furniture" width="80" height="80">
             <div class="header__catalog-title">
                 Мебель
             </div>
         </a>
         <a class="header__catalog-item" href="#">
-            <img class="header__catalog-image" src="@/assets/svg/douche.svg" alt="douche" width="80" height="80">
+            <img class="header__catalog-image" src="../../assets/svg/douche.svg" alt="douche" width="80" height="80">
             <div class="header__catalog-title">
                 Душевая программа
             </div>
         </a>
         <a class="header__catalog-item" href="#">
-            <img class="header__catalog-image" src="@/assets/svg/ceramics.svg" alt="ceramics" width="80" height="80">
+            <img class="header__catalog-image" src="../../assets/svg/ceramics.svg" alt="ceramics" width="80" height="80">
             <div class="header__catalog-title">
                 Фаянс
             </div>
@@ -27,7 +27,7 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @include popupKeyframes(showCatalog);
 
 .header__catalog {

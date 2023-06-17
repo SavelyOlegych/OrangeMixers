@@ -13,7 +13,7 @@
         <span
             class="header__menu-item"
             :class="{'header__menu-item--active': isCatalogVisible}"
-            @click="isCatalogVisible = !isCatalogVisible"
+            @click="toggleHeaderCatalog"
         >
             <span class="header__menu-text">
                 Каталог товаров
@@ -23,20 +23,39 @@
             </svg>
         </span>
     </nav>
-    <PopupBackground v-model:show="isCatalogVisible" :full-screen="false">
-        <HeaderPopupCatalog @click.stop />
+    <PopupBackground
+        :show="isCatalogVisible"
+        @update:show="setIsCatalogVisible"
+        :full-screen="false">
+        <HeaderCatalogPopup @click.stop />
     </PopupBackground>
 </template>
 
 <script>
 import PopupBackground from '@/components/PopupBackground.vue';
-import HeaderPopupCatalog from '@/components/HeaderPopupCatalog.vue';
+import HeaderCatalogPopup from '@/components/header/HeaderCatalogPopup.vue';
+import { mapActions, mapMutations, mapState } from 'vuex';
 
 export default {
-    components: { HeaderPopupCatalog, PopupBackground },
-    data() {
-        return {
-            isCatalogVisible: false
+    components: { HeaderCatalogPopup, PopupBackground },
+    computed: {
+        ...mapState({
+            isCatalogVisible: state => state.popups.isCatalogVisible
+        })
+    },
+    methods: {
+        ...mapMutations({
+            setIsCatalogVisible: 'popups/setIsCatalogVisible'
+        }),
+        ...mapActions({
+            closeAllPopups: 'popups/closeAllPopups'
+        }),
+        toggleHeaderCatalog() {
+            if (!this.isCatalogVisible) {
+                this.closeAllPopups();
+            }
+
+            this.setIsCatalogVisible(!this.isCatalogVisible);
         }
     }
 };

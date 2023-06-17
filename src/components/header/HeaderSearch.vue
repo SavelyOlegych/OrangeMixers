@@ -59,16 +59,12 @@ export default {
         border: 1px solid #D9D9D9;
         border-radius: 2px;
         transition: border-color .3s;
-        padding-left: 16px;
+        padding: 0 16px;
 
         font-family: 'PT Sans', sans-serif;
         font-weight: 400;
         font-size: 20px;
         line-height: 24px;
-
-        &::placeholder {
-            font: inherit;
-        }
 
         &:hover {
             border-color: #747474;

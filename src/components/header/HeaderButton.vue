@@ -12,5 +12,9 @@
     height: 40px;
     cursor: pointer;
     background-color: transparent;
+
+    &:hover {
+        border-color: gray;
+    }
 }
 </style>
