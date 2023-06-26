@@ -1,9 +1,9 @@
 <template>
-    <header class="header">
+    <header class="header" id="header">
         <div class="header__wrapper container-wide" :class="{'header__wrapper--main-page': isMainPage}">
             <div class="header__left">
-                <a class="header__logo-link" href="/public">
-                    <img class="header__logo" src="../../assets/svg/logo.svg" alt="logo" width="126" height="35">
+                <a class="header__logo-link" href="/">
+                    <Logo class="header__logo"/>
                 </a>
                 <div class="header__text" v-if="!isMainPage">
                     Разработано в Германии. Сделано в России.
@@ -35,10 +35,12 @@ import HeaderButton from '@/components/header/HeaderButton.vue';
 import HeaderMenu from '@/components/header/HeaderMenu.vue';
 import PopupBackground from '@/components/PopupBackground.vue';
 import HeaderSearch from '@/components/header/HeaderSearch.vue';
+import Logo from '@/components/icons/Logo.vue';
 import { mapState, mapActions, mapMutations } from 'vuex';
 
 export default {
     components: {
+        Logo,
         HeaderSearch,
         PopupBackground,
         HeaderMenu,
@@ -83,6 +85,10 @@ export default {
         &--main-page {
             height: 95px;
         }
+    }
+
+    &__logo {
+        display: block;
     }
 
     &__left {
