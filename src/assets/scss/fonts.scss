@@ -1,0 +1,45 @@
+// PT Sans
+@font-face {
+    font-family: 'PT Sans';
+    src: url('@/assets/fonts/PTSans-Bold.eot');
+    src: local('PT Sans Bold'), local('PTSans-Bold'),
+    url('@/assets/fonts/PTSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('@/assets/fonts/PTSans-Bold.woff') format('woff'),
+    url('@/assets/fonts/PTSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('@/assets/fonts/PTSans-Regular.eot');
+    src: local('PT Sans'), local('PTSans-Regular'),
+    url('@/assets/fonts/PTSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('@/assets/fonts/PTSans-Regular.woff') format('woff'),
+    url('@/assets/fonts/PTSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// OrenburgC
+@font-face {
+    font-family: 'OrenburgC';
+    src: url('@/assets/fonts/OrenburgC.eot');
+    src: local('OrenburgC'),
+    url('@/assets/fonts/OrenburgC.eot?#iefix') format('embedded-opentype'),
+    url('@/assets/fonts/OrenburgC.woff') format('woff'),
+    url('@/assets/fonts/OrenburgC.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OrenburgC';
+    src: url('@/assets/fonts/OrenburgC-Bold.eot');
+    src: local('OrenburgC Bold'), local('OrenburgC-Bold'),
+    url('@/assets/fonts/OrenburgC-Bold.eot?#iefix') format('embedded-opentype'),
+    url('@/assets/fonts/OrenburgC-Bold.woff') format('woff'),
+    url('@/assets/fonts/OrenburgC-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}

@@ -1,0 +1,30 @@
+@mixin orenburgcRegular {
+    font-family: 'OrenburgC', sans-serif;
+    font-weight: 400;
+}
+
+@mixin orenburgcBold {
+    font-family: 'OrenburgC', sans-serif;
+    font-weight: 700;
+}
+
+@mixin displayFlex($justifyContent: normal, $alignItems: normal) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin orangeTextBold {
+    font-weight: 700;
+    color: $orangeTextColor;
+}
+
+@mixin productBorders($gridColumns) {
+    &:nth-child(#{$gridColumns}n + 1) {
+        border-left: 1px solid #ECECEC;
+    }
+
+    &:nth-child(-n + #{$gridColumns}) {
+        border-top: 1px solid #ECECEC;
+    }
+}
